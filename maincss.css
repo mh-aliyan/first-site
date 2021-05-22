@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    direction: rtl;
 }
 
 main{
@@ -21,6 +22,7 @@ main{
     backdrop-filter: blur(0.5rem);
     border-radius: 30px;
     z-index: 2;
+    padding: 2% 4% 2% 1%;
 }
 .circle1, .circle2{
     position: absolute;
@@ -39,4 +41,20 @@ main{
     left: 8%;
     background: linear-gradient(to left bottom, 
     rgba(250,250,250,0.6), rgba(83, 33, 70,0.6), rgba(0,0,0,0.4));
+}
+.border{
+    width: 95%;
+    height: 10%;
+    background-color: rgb(230, 227, 227);
+    margin-bottom: 2%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px 3px rgb(63, 60, 60);
+    padding-right: 4%;
+
+}
+.error1{
+    color: red;
+}
+.checkboxs{
+    display: flex;
 }
