@@ -13,14 +13,13 @@
             <div class="border">
                 <h3>نوع کارتن</h3>
                     <div>
-                        <input type="checkbox" id="check" onclick="return error()">
-                        <label for="check1">کارتن عادی</label>
-
-                        <input type="checkbox" id="check" onclick="return error()">
-                        <label for="check2">کارتن دایکاتی</label>
-
-                        <input type="checkbox" id="check" onclick="return error()">
-                        <label for="check3"> سینی</label>
+                        <form>
+                            <input type="radio" id="box1" name="box" value="normal">
+                            <label for="box1">کارتن عادی</label><br>
+                            <input type="radio" id="box2" name="box" value="dicut">
+                            <label for="box2">کارتن دایکاتی</label><br>
+                            <input type="radio" id="box3" name="box" value="plate">
+                            <label for="box3">سینی</label>
                     </div>
                 <div>
                     <span class="error1" id="notvalid"></span>
