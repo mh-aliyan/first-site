@@ -11,57 +11,161 @@
     <main>
         <section class="glass">
             <div class="border">
+
+                <div class="under-line">
                 <h3>نوع کارتن</h3>
-                    <div>
-                        <form>
+                
+                    <form class="flex-container margin">
+                        <div>
                             <input type="radio" id="box1" name="box" value="normal">
-                            <label for="box1">کارتن عادی</label><br>
+                            <label for="box1">کارتن عادی</label>
+                        </div>
+                        <div>
                             <input type="radio" id="box2" name="box" value="dicut">
-                            <label for="box2">کارتن دایکاتی</label><br>
+                            <label for="box2">کارتن دایکاتی</label>      
+                        </div>
+                        <div>
                             <input type="radio" id="box3" name="box" value="plate">
                             <label for="box3">سینی</label>
-                    </div>
-                <div>
-                    <span class="error1" id="notvalid"></span>
-                </div>
+                        </div>
+                    </form>
+                </div>    
 
-
-
-                <h3> ابعاد کارتن ( بر حسب میلیمتر)</h3>
+                <h3 class="margin"> ابعاد کارتن ( بر حسب میلیمتر)</h3>
+                <div class="flex-container margin">
                     <div>
-                        salam</br>
-                        salam</br>
-                        salam</br>
+                        <label for="length"> طول   :</label>     
+                        <input type="text" class="input" id="length" name="length"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /> میلیمتر   
                     </div>
+                    <div>        
+                        <label for="Width">عرض:</label>
+                        <input type="text" class="input" id="Width" name="Width"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /> میلیمتر
+                            
+                    </div>
+                    <div>
+                        <label for="Height">ارتفاع:</label>
+                        <input type="text" class="input" id="Height" name="Height"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /> میلیمتر  
+                    </div>
+                </div>    
 
 
-                <div>
-                    <h3>وزن محصول</h3>
+
+                <div class="margin under-line">
+                    <label for="Weight">وزن محصول:</label>
+                    <input type="text" class="input2" id="Weight" name="Weight"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                    کیلوگرم
                 </div>
 
 
-                <h3> پیشنهاد تولید کننده</h3>
-                    <div>    
-                        salam</br>
-                        salam</br>
-                    </div>
-                    
-                    
+
+                <h3 class="margin "> پیشنهاد تولید کننده :</h3>
+
+                    <div class="margin">
+
+                        <span class="margin-right">نوع ورق:</span> <span class="result-border" ></span>                       
                         
-                <h3> جنس درخواستی </h3>
-                    <div>
-                        salam</br>
-                        salam</br>
+                        <span class="margin-right">نوع فلوتینگ:</span><span class="result-border"></span>
+                    </div> 
+                    <div class="flex-container margin under-line">    
+                        لایه رویه:<span class="result-border"></span>
+                        لایه میانی:<span class="result-border"></span>
+                        لایه داخلی:<span class="result-border"></span>
+                        
+                    </div>
+ 
+                    
+                
+                    <h3 class="margin"> جنس درخواستی :</h3> 
+
+                <div class="request-box margin flex-container ">
+                    
+
+                    <div class="dropdown margin">
+                        <button onclick="myFunction()" class="dropbtn">نوع ورق</button>
+                        <div id="myDropdown" class="dropdown-content">
+                        <a href="#"> سه لایه</a>
+                        <a href="#"> پنج لایه</a>
+                        </div>
                     </div>
 
+                    <!-- 3 لایه -->
 
-                <div>
-                    <h3>تعداد سفارش</h3>
+                    <div class="dropdown margin three-layer ">
+                        <button onclick="myFunction1()" class="dropbtn">نوع فلوتینگ</button>
+                        <div id="myDropdown-1" class="dropdown-content">
+                        <a href="#"> B </a>
+                        <a href="#"> C </a>
+                        <a href="#"> T </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown margin three-layer ">
+                        <button onclick="myFunction2()" class="dropbtn">لایه رویه</button>
+                        <div id="myDropdown-2" class="dropdown-content">
+                        <a href="#">  سفید خارجی </a> 
+                        <a href="#">  سفید  </a> 
+                        <a href="#"> کرافت سنگین </a>
+                        <a href="#"> کرافت </a>
+                        <a href="#"> کرافت 2 </a>
+                        <a href="#"> تست لاینر </a>
+                        <a href="#"> لاینر </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown margin three-layer">
+                        <button onclick="myFunction3()" class="dropbtn">فلوتینگ</button>
+                        <div id="myDropdown-3" class="dropdown-content">
+                        <a href="#"> فلوت </a>
+                        <a href="#"> لاینر </a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown margin three-layer">
+                        <button onclick="myFunction4()" class="dropbtn">لایه داخلی</button>
+                        <div id="myDropdown-4" class="dropdown-content"> 
+                            <a href="#">  سفید  </a> 
+                            <a href="#"> کرافت سنگین </a>
+                            <a href="#"> کرافت </a>
+                            <a href="#"> کرافت 2 </a>
+                            <a href="#"> تست لاینر </a>
+                            <a href="#"> لاینر </a>
+                        </div>
+                    </div>
                 </div>
 
 
-                <div>
-                    <h3>قیمت نهایی</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="margin">
+                    <label for="length"> تعداد سفارش    :</label>     
+                        <input type="text" class="input" id="length" name="length"
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                </div>
+
+
+                <div class="margin price">
+                   قیمت نهایی <span class="result-border input3"></span>
                 </div>
             </div>
             <div class="border">
